@@ -1,0 +1,18 @@
+<div class="center-container">
+
+<div [formGroup]="register"  class="bg-class">
+    <div style="display: flex; flex-direction: column;">
+        <label>Email</label>
+        <input type="email"  placeholder="please Enter email" class="form-control" formControlName="email"/>
+
+    </div>
+    <div style="display: flex; flex-direction: column;">
+        <label>Password</label>
+        <input type="password" class="form-control"  placeholder="please Enter password" formControlName="password"/>
+
+    </div>
+    <div style="margin-top: 20px;">
+        <button (click)="submit()">Submit</button>
+    </div>
+</div>
+</div>

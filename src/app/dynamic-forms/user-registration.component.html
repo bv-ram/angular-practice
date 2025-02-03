@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Dynamic Form Example (No FormBuilder)</h1>
+
+    <form [formGroup]="dynamicForm" >
+      <div formArrayName="fields">
+        <div *ngFor="let field of fields.controls; let i = index" [formGroupName]="i" class="form-group">
+          <label>
+            Label:
+            <input type="text" formControlName="label" placeholder="Field Label" />
+          </label>
+          <label>
+            Value:
+            <input type="text" formControlName="value" placeholder="Field Value" />
+          </label>
+          <button type="button" (click)="removeField(i)">Remove</button>
+        </div>
+      </div>
+  
+      <button type="button" (click)="addField()">Add Field</button>
+      <button type="submit" [disabled]="dynamicForm.invalid" (click)="onSubmit()">Submit</button>
+    </form>
+  
+
+    <div *ngIf="dynamicForm.value">
+      <h2>Form Data:</h2>
+      <pre>{{ dynamicForm.value | json }}</pre>
+    </div>
+  </div>

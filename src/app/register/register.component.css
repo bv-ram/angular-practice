@@ -1,0 +1,23 @@
+.center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.bg-class{
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    background: #c1b9b8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+@media (max-width:600px){
+    .bg-class{
+        width: 90%;
+        padding: 15px;
+    }
+}
